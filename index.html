@@ -32,7 +32,7 @@
                     <div class="prev" @click="showPrevIndexImg"></div>
                     <div class="next" @click="showNextIndexImg"></div>
 
-                    <div v-for="image, index in slides" :class="propShowThumb(index)">
+                    <div v-for="image, index in slides" :class="propShowThumb(index)" @click="setAsIndex(index)">
                         <img :src="image.image" />
                     </div>
                 </div>

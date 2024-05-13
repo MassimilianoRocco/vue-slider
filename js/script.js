@@ -57,6 +57,9 @@ createApp({
             if(this.index<0){
                 this.index = 4;
             }
+        },
+        setAsIndex(index){
+            this.index = index;
         }
        
     },
