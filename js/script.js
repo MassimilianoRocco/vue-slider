@@ -41,9 +41,15 @@ createApp({
         },
         showNextIndexImg(){
             this.index ++;
+            if(this.index>4){
+                this.index=0;
+            }
         },
         showPrevIndexImg(){
             this.index --;
+            if(this.index<0){
+                this.index = 4;
+            }
         }
        
     },
