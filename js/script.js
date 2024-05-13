@@ -39,6 +39,13 @@ createApp({
                 return "";
             }
         },
+        propShowThumb(index) {
+            if(index == this.index){
+                return "thumb activeThumb";
+            }else{
+                return "thumb opacityLow";
+            }
+        },
         showNextIndexImg(){
             this.index ++;
             if(this.index>4){
