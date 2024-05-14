@@ -5,6 +5,8 @@ createApp({
     data() {
         return {
             index:0,
+            autoCheck: true,
+            timer: null,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -60,6 +62,18 @@ createApp({
         },
         setAsIndex(index){
             this.index = index;
+        },
+        autoPlay(){
+            if(this.autoCheck == false){
+                console.log("Sono nell'IF")
+                clearInterval(this.timer);
+                this.autoCheck=true;
+            }
+            else if(this.autoCheck==true){
+                console.log("Sono nell'ELSE")
+                this.autoCheck=false;
+                this.timer = setInterval(this.showNextIndexImg, 3000)
+            }     
         }
        
     },

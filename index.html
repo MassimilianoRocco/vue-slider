@@ -30,7 +30,7 @@
 
                 <div class="thumbs">
                     <div class="prev" @click="showPrevIndexImg"></div>
-                    <div class="next" @click="showNextIndexImg"></div>
+                    <div class="next" @click="autoPlay"></div>
 
                     <div v-for="image, index in slides" :class="propShowThumb(index)" @click="setAsIndex(index)">
                         <img :src="image.image" />
